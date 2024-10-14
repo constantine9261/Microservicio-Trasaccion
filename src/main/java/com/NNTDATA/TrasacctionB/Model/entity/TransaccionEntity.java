@@ -24,5 +24,7 @@ public class TransaccionEntity implements Serializable {
     private LocalDateTime fecha;
     private Integer cuentaOrigenId;
     private Integer cuentaDestinoId; // Puede ser null si no es transferencia
+    private BigDecimal saldoOrigen; // Saldo de la cuenta de origen después de la transacción
+    private BigDecimal saldoDestino; // Saldo de la cuenta de destino después de la transacción
     private String onError; // Mensaje de error en caso de falla
 }

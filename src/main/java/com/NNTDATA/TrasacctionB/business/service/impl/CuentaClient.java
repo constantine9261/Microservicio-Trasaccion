@@ -25,7 +25,7 @@ public class CuentaClient {
     // New method to update the account balance
     public Mono<Void> actualizarSaldo(Integer cuentaId, BigDecimal nuevoSaldo) {
         return webClient.put()
-                .uri("/cuentas/{id}/saldo", cuentaId)
+                .uri("/{id}/saldo", cuentaId)
                 .bodyValue(nuevoSaldo)
                 .retrieve()
                 .bodyToMono(Void.class);
